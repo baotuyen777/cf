@@ -2480,13 +2480,13 @@ html.lt-ie-10 .range > [class*="cell-lg-preffix-"] {
   font-family: "Roboto Mono", Monaco, Consolas, "Courier New", monospace;
 }
 
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+/*h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-top: 0;
   margin-bottom: 0;
   font-family: "Jaapokki", Helvetica, Arial, sans-serif;
   font-weight: 400;
   color: #242423;
-}
+}*/
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .h1 a, .h2 a, .h3 a, .h4 a, .h5 a, .h6 a {
   display: inline;
@@ -2528,7 +2528,7 @@ h2,
 .h2 {
   font-size: 22px;
   line-height: 1.2;
-  letter-spacing: .2em;
+  /*letter-spacing: .2em;*/
   text-transform: uppercase;
 }
 
@@ -2605,10 +2605,11 @@ small,
   line-height: 18px;
 }
 
+
 @media (min-width: 480px) {
   .big {
-    font-size: 14px;
-    line-height: 24px;
+/*    font-size: 14px;
+    line-height: 24px;*/
   }
   .large {
     font-size: 16px;
@@ -2736,7 +2737,7 @@ address {
   background-color: #8c6344;
 }
 
-.bg-gray-dark h1, .bg-gray-dark h2, .bg-gray-dark h3, .bg-gray-dark h4, .bg-gray-dark h5, .bg-gray-dark h6, .bg-gray-dark .h1, .bg-gray-dark .h2, .bg-gray-dark .h3, .bg-gray-dark .h4, .bg-gray-dark .h5, .bg-gray-dark .h6, .bg-gray-dark .caption, .bg-gray-dark .p, .bg-gray-dark * + p {
+.bg-gray-dark h1, .bg-gray-dark h2, .bg-gray-dark h3, .bg-gray-dark h4, .bg-gray-dark h5, .bg-gray-dark h6, .bg-gray-dark .h1, .bg-gray-dark .h2, .bg-gray-dark .h3, .bg-gray-dark .h4, .bg-gray-dark .h5, .bg-gray-dark .h6, .bg-gray-dark .caption, .bg-gray-dark .p {
   color: #fff;
 }
 
@@ -2946,7 +2947,7 @@ address {
 
 .btn {
   padding: 12px 33px 10px;
-  font-family: "Jaapokki", Helvetica, Arial, sans-serif;
+  /*font-family: "Jaapokki", Helvetica, Arial, sans-serif;*/
   font-size: 12px;
   font-weight: 400;
   text-transform: uppercase;
@@ -3202,7 +3203,7 @@ address {
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-  font: 400 10px/14px "Jaapokki", Helvetica, Arial, sans-serif;
+  /*font: 400 10px/14px "Jaapokki", Helvetica, Arial, sans-serif;*/
   letter-spacing: .1em;
   text-transform: uppercase;
   text-align: left;
@@ -15205,7 +15206,7 @@ address {
 .thumbnail-card-header {
   margin-top: 0;
   margin-bottom: 0;
-  font-family: "Jaapokki", Helvetica, Arial, sans-serif;
+  /*font-family: "Jaapokki", Helvetica, Arial, sans-serif;*/
   font-weight: 400;
   color: #242423;
   font-size: 14px;
@@ -15274,7 +15275,7 @@ address {
 .thumbnail-fullwidth-header {
   margin-top: 0;
   margin-bottom: 0;
-  font-family: "Jaapokki", Helvetica, Arial, sans-serif;
+  /*font-family: "Jaapokki", Helvetica, Arial, sans-serif;*/
   font-weight: 400;
   color: #242423;
   font-size: 20px;
@@ -17511,13 +17512,13 @@ section {
 
 @media (min-width: 768px) {
   .page-footer.page-footer-variant-3 {
-    padding: 70px 0 100px;
+    /*padding: 70px 0 100px;*/
   }
 }
 
 @media (min-width: 1200px) {
   .page-footer.page-footer-variant-3 {
-    padding: 80px 0 130px;
+    /*padding: 80px 0 130px;*/
   }
 }
 
@@ -17800,10 +17801,10 @@ h3 + *,
   margin-top: 25px;
 }
 
-p + p,
+/*p + p,
 .p + .p {
   margin-top: 22px;
-}
+}*/
 
 .grid-system-row + .grid-system-row {
   margin-top: 0;
@@ -19544,10 +19545,10 @@ blockquote .small:before {
   }
 }
 
-.quote-centered {
+/*.quote-centered {
   background: transparent;
   text-align: center;
-}
+}*/
 
 .quote-centered q {
   font-style: italic;
@@ -19614,7 +19615,7 @@ blockquote .small:before {
   height: 100%;
   color: #fff;
   background: #e2a18d;
-  font: 400 48px/108px "Jaapokki", Helvetica, Arial, sans-serif;
+  /*font: 400 48px/108px "Jaapokki", Helvetica, Arial, sans-serif;*/
   text-align: center;
 }
 
@@ -19629,7 +19630,7 @@ blockquote .small:before {
 
 @media (min-width: 1200px) {
   .quote-centered * + cite {
-    margin-top: 55px;
+    margin-top: 20px;
   }
 }
 
@@ -28371,12 +28372,12 @@ html:not(.lt-ie10) .not-animated {
   display: inline-block;
 }
 
-.rd-navbar-fullwidth .rd-navbar-nav > li > a,
+/*.rd-navbar-fullwidth .rd-navbar-nav > li > a,
 .rd-navbar-static .rd-navbar-nav > li > a {
   font: 400 12px/18px "Jaapokki", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   letter-spacing: .1em;
-}
+}*/
 
 .rd-navbar-fullwidth .rd-navbar-nav li.focus > .rd-navbar-dropdown,
 .rd-navbar-fullwidth .rd-navbar-nav li.focus > .rd-navbar-megamenu,
@@ -28665,8 +28666,8 @@ html:not(.lt-ie10) .not-animated {
 }
 
 .rd-navbar-static .rd-navbar-brand img {
-  width: 154px;
-  height: auto;
+  /*width: 154px;*/
+  height: 50px;
 }
 
 .rd-navbar-static .rd-navbar-nav-wrap {
@@ -28923,7 +28924,7 @@ html:not(.lt-ie10) .not-animated {
 }
 
 .rd-navbar-fixed .rd-navbar-brand img {
-  height: 27px;
+  height: 35px;
   width: auto;
 }
 

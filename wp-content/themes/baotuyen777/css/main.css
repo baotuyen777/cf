@@ -1,0 +1,104 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jul 1, 2017, 9:14:17 PM
+    Author     : michael
+*/
+@font-face {
+    font-family: thuphap;
+    src: url(../fonts/UVNThangVu.TTF);
+}
+@font-face {
+    font-family: thuphaplight;
+    src: url(../fonts/hlnhenha.ttf);
+}
+body{
+    /*font-family: thuphaplight*/
+    font-family: 'Farsan', cursive;
+    font-size: 18px;
+    color:rgba(0, 0, 0, 0.73);
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: thuphap;
+    font-weight: 400;
+    color: #242423;
+}
+.logo{
+    width: 300px;
+}
+.logo span{
+    color: white;
+    font-size: 20px;
+    margin-left: 10px;
+    float: left;
+    margin-top: 15px;
+    font-family: thuphap
+}
+.logo small{
+    margin-top:10px;
+    display: block;
+}
+.logo img{
+    float: left;
+}
+.rd-navbar-fullwidth .rd-navbar-nav > li > a, .rd-navbar-static .rd-navbar-nav > li > a {
+    font-family: thuphap;
+    color:white;
+    font-size: 20px;
+}
+.box-icon-header a {
+    font-family: thuphap;
+    color:white;
+    font-size: 18px;
+}
+.quote-centered {
+    background: #fff;
+    text-align: center;
+    border: 1px solid #ccc;
+    /*padding: 20px 0px;*/
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+.quote-centered-avatar{
+    background: #8c6344;
+    width: 100%;
+    padding-top: 20px;
+}
+.thumbnail-card img{
+    box-shadow: 0 2px 4px -1px rgba(0,0,0,0.06);
+    width: 100%;
+}
+.thumbnail-card-body a{
+    font-family: thuphap;
+    font-size: 18px;
+
+}
+.rd-navbar-static.rd-navbar--is-stuck .rd-navbar-inner, .rd-navbar-static.rd-navbar--is-clone .rd-navbar-inner {
+    padding-top: 10px;
+    padding-bottom: 0px;
+}
+.map iframe{
+    /*pointer-events: none;*/
+}
+.bg-gray-dark .big{
+    color: white;
+}
+@media (min-width: 992px){
+    .post-classic-body {
+        padding: 30px 100px;
+    }
+}
+
+/*.bg-gray-dark*/ 
+@media(max-width:991px){
+    .logo span {
+        font-size: 15px;
+        float: left;
+        margin-top: 9px;
+    }
+}
