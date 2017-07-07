@@ -31,7 +31,7 @@
                 <div class="rd-navbar-brand">
                     <a href="<?php echo get_site_url()?>" class="brand-name logo">
                         <img src="<?php echo get_template_directory_uri()?>/images/logo.jpg" alt="logo-crman"  />
-                        <span >Cafe CR MAN 
+                        <span >CR MAN Coffee 
                         <small>Sạch Sẽ Sáng Suốt Sáng Tạo</small></span>
                         
                     </a></div>
@@ -43,52 +43,10 @@
                     'container_class' => 'rd-navbar-nav-inner'
                 ))
                 ?>
-<!--                <div class="rd-navbar-nav-inner">
-                  <ul class="rd-navbar-nav">
-                    <li class="active"><a href="index.html">Home</a>
-                    </li>
-                    <li><a href="about.html">About</a>
-                      <ul class="rd-navbar-dropdown">
-                        <li><a href="team.html">Our team</a>
-                        </li>
-                        <li><a href="testimonials.html">Testimonials</a>
-                        </li>
-                        <li><a href="faq.html">FAQ</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li><a href="services.html">Services</a>
-                    </li>
-                    <li><a href="blog.html">Blog</a>
-                      <ul class="rd-navbar-dropdown">
-                        <li><a href="single-post.html">Single post</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li><a href="shop.html">Shop</a>
-                      <ul class="rd-navbar-dropdown">
-                        <li><a href="single-product.html">Single product</a>
-                        </li>
-                        <li><a href="cart.html">Cart</a>
-                        </li>
-                        <li><a href="checkout.html">Checkout</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li><a href="#">Contacts</a>
-                      <ul class="rd-navbar-dropdown">
-                        <li><a href="contacts-1.html">Contacts 1</a>
-                        </li>
-                        <li><a href="contacts-2.html">Contacts 2</a>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>-->
               </div>
-              <div class="rd-navbar-inner-left">
-                <div class="booking-control"><a href="shop.html" class="btn btn-xs btn-circle btn-primary">BUY NOW</a></div>
-              </div>
+<!--              <div class="rd-navbar-inner-left">
+                  <div class="booking-control"><a href="<?php echo get_permalink(PAGE_SHOP)?>" class="btn btn-xs btn-circle btn-primary">Cửa hàng</a></div>
+              </div>-->
             </div>
           </nav>
         </div>

@@ -1,13 +1,13 @@
 <?php
 /**
- * Template name: News
+ * Template name: service
  */
 get_header();
 ?>
 <div class="page-title">
     <div class="page-title-content">
         <div class="shell">
-            <h1>Văn hóa cà phê</h1>
+            <h1>Dịch vụ của CR MAN</h1>
         </div>
     </div>
 </div>
@@ -24,7 +24,7 @@ get_header();
                         <div class="range range-30 blog">
                             <?php
                             $query_param = array(
-                                'post_type' => 'post',
+                                'post_type' => 'service',
                                 'orderby' => 'id',
                                 'order' => 'ASC',
                             );

@@ -2,15 +2,17 @@
 /**
  * Template name: Home
  */
-get_header()
+get_header();
+$banner = get_field('banner', PAGE_HOME);
 ?>
-<section style="background-image: url(<?php echo get_template_directory_uri() ?>/images/bg-image-4.jpg);" class="jumbotron-custom jumbotron-custom-2 bg-gray-base bg-image">
+<section style="background-image: url(<?php echo $banner['url'] ?>)" class="jumbotron-custom jumbotron-custom-2 bg-gray-base bg-image">
     <div class="jumbotron-custom-content">
         <div class="shell">
             <div class="range">
                 <div class="cell-sm-10 cell-md-9 cell-lg-7">
-                    <h1>Elite Coffee Brands</h1>
-                    <p class="large">Coffee Shop is the place where you can get flavorful coffee strains from global elite brands and roasters at very affordable price.</p><a href="about.html" class="btn btn-style-1 btn-primary">Xem thêm</a>
+                    <h1><?php echo $banner['title'] ?></h1>
+                    <p class="large"><?php echo $banner['caption'] ?></p>
+                    <a href="<?php echo get_permalink(PAGE_ABOUTUS) ?>" class="btn btn-style-1 btn-primary">Xem thêm</a>
                 </div>
             </div>
         </div>
@@ -63,38 +65,30 @@ get_header()
             <div style="background-image: url(<?php echo get_template_directory_uri() ?>/images/home-three-3-1011x800.jpg)" class="cell-md-6 cell-md-6-mod-2 image-wrap-right bg-gray-dark bg-image">
                 <div class="image-wrap-inner">
                     <div class="range range-condensed range-inner-bordered">
-                        <div class="cell-xs-6">
-                            <article class="box-icon">
-                                <figure class="box-icon-image"><img src="<?php echo get_template_directory_uri() ?>/images/icon-service-3-84x84.png" alt="" width="84" height="84"/>
-                                </figure>
-                                <p class="box-icon-header"><a href="services.html">Cung cấp cafe hạt</a></p>
-                                <p class="box-icon-text">Đúng xuất xứ, đat tiêu chuẩn ngon, sạch.</p>
-                            </article>
-                        </div>
-                        <div class="cell-xs-6">
-                            <article class="box-icon">
-                                <figure class="box-icon-image"><img src="<?php echo get_template_directory_uri() ?>/images/icon-service-4-84x84.png" alt="" width="84" height="84"/>
-                                </figure>
-                                <p class="box-icon-header"><a href="services.html">Xuấ khẩu cà phê</a></p>
-                                <p class="box-icon-text"></p>
-                            </article>
-                        </div>
-                        <div class="cell-xs-6">
-                            <article class="box-icon">
-                                <figure class="box-icon-image"><img src="<?php echo get_template_directory_uri() ?>/images/icon-service-1-84x84.png" alt="" width="84" height="84"/>
-                                </figure>
-                                <p class="box-icon-header"><a href="services.html">Cafe hat đã rang xay</a></p>
-                                <p class="box-icon-text">Cung cấp cafe hạt đã rang pha máy và pha phin cho quán Cà phê, nhà hàng.</p>
-                            </article>
-                        </div>
-                        <div class="cell-xs-6">
-                            <article class="box-icon">
-                                <figure class="box-icon-image"><img src="<?php echo get_template_directory_uri() ?>/images/icon-service-2-84x84.png" alt="" width="84" height="84"/>
-                                </figure>
-                                <p class="box-icon-header"><a href="services.html">Chuyển giao công nghệ</a></p>
-                                <p class="box-icon-text">Chuyển giao công nghệ, lắp đặt thiết bị rang xay cà phê.</p>
-                            </article>
-                        </div>
+                        <?php
+                        $query_param = array(
+                            'post_type' => 'service',
+                            'posts_per_page' => 4,
+                            'orderby' => 'id',
+                            'order' => 'ASC',
+                        );
+                        $service_query = new WP_Query($query_param);
+                        if ($service_query->have_posts()):while ($service_query->have_posts()): $service_query->the_post();
+                                ?>
+                                <div class="cell-xs-6">
+                                    <article class="box-icon">
+                                        <figure class="box-icon-image">
+                                            <?php the_post_thumbnail() ?>
+                                            <!--<img src="<?php echo get_template_directory_uri() ?>/images/icon-service-3-84x84.png" alt="" width="84" height="84"/>-->
+                                        </figure>
+                                        <p class="box-icon-header"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></p>
+                                        <p class="box-icon-text"><?php echo get_the_excerpt() ?></p>
+                                    </article>
+                                </div>
+                                <?php
+                            endwhile;
+                        endif;
+                        ?>
                     </div>
                 </div>
             </div>
@@ -159,28 +153,28 @@ get_header()
                     <?php
                     $query_param = array(
                         'post_type' => 'product',
-                        'orderby'   => 'id',
+                        'orderby' => 'id',
                         'order' => 'ASC',
                         'tax_query' => array(
                             array(
-                              'taxonomy' => 'product_cat',
-                              'field' => 'slug',
-                              'terms' => 'san-pham-chinh' // Where term_id of Term 1 is "1".
+                                'taxonomy' => 'product_cat',
+                                'field' => 'slug',
+                                'terms' => 'san-pham-chinh' // Where term_id of Term 1 is "1".
                             )
-                          )
+                        )
                     );
                     $my_query = new WP_Query($query_param);
                     if ($my_query->have_posts()):while ($my_query->have_posts()): $my_query->the_post();
                             ?>
                             <div class="cell-sm-6 cell-md-4 height-fill">
                                 <div class="thumbnail-card">
-                                    <?php the_post_thumbnail('product-thumb')?>
+                                    <?php the_post_thumbnail('product-thumb') ?>
                                     <div class="thumbnail-card-body">
-                                        <a href="<?php the_permalink()?>" class="thumbnail-card-header"><?php the_title()?></a>
+                                        <a href="<?php the_permalink() ?>" class="thumbnail-card-header"><?php the_title() ?></a>
                                         <div class="thumbnail-card-text">
-                                            <p><?php the_excerpt()?></p>
+                                            <p><?php the_excerpt() ?></p>
                                         </div>
-                                   
+
                                     </div>
                                 </div>
                             </div>
@@ -191,7 +185,7 @@ get_header()
                 </div>
             </div>
             <div class="cell-xs-12">
-                <a href="<?php echo get_permalink(PAGE_SHOP)?>" class="btn btn-sm btn-style-1 btn-primary">Xem tất cả sản phẩm</a></div>
+                <a href="<?php echo get_permalink(PAGE_SHOP) ?>" class="btn btn-sm btn-style-1 btn-primary">Xem tất cả sản phẩm</a></div>
         </div>
     </div>
 </section>
@@ -207,7 +201,7 @@ get_header()
             </div>
             <div class="cell-xs-12">
                 <div data-arrows="false" data-loop="true" data-dots="true" data-swipe="true" data-autoplay="false" data-items="1" data-lg-items="3" data-center-mode="true" data-center-padding="0.0" class="slick-slider carousel-center-mode">
-                     <?php
+                    <?php
                     $query_param = array(
                         'post_type' => 'post',
                         'orderby' => 'id',
@@ -226,14 +220,14 @@ get_header()
                             <div class="item">
                                 <div class="slick-slide-inner">
                                     <article class="post-classic">
-                                        <?php the_post_thumbnail('home_blog',array('class'=>'post-classic-image')) ?>
-                                        <!--<img src="<?php // echo get_template_directory_uri()) ?>/images/blog-2-770x330.jpg" alt="" width="770" height="330" class="post-classic-image"/>-->
+                                        <?php the_post_thumbnail('home_blog', array('class' => 'post-classic-image')) ?>
+                                        <!--<img src="<?php // echo get_template_directory_uri())      ?>/images/blog-2-770x330.jpg" alt="" width="770" height="330" class="post-classic-image"/>-->
                                         <div class="post-classic-body">
-                                            <p class="post-classic-title"><a href="<?php the_permalink()?>"><?php the_title()?></a></p>
+                                            <p class="post-classic-title"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></p>
                                             <div class="post-classic-text">
-                                                <p><?php the_excerpt()?></p>
+                                                <p><?php the_excerpt() ?></p>
                                             </div>
-                                            
+
                                         </div>
                                     </article>
                                 </div>
@@ -242,8 +236,8 @@ get_header()
                         endwhile;
                     endif;
                     ?>
-                   
-                    
+
+
                 </div>
             </div>
         </div>

@@ -51,5 +51,37 @@ function create_product_taxonomies() {
     );
 }
 
+//service
+add_action('init', 'service_register');
+function service_register() {
+    global $themename;
+    $labels = array(
+        'name' => __('Service', 'post type general name', $themename),
+        'singular_name' => __('Service Item', 'post type singular name', $themename),
+        'add_new' => __('Add New', 'Service', $themename),
+        'add_new_item' => __('Add New Service', $themename),
+        'edit_item' => __('Edit Service', $themename),
+        'new_item' => __('New Service', $themename),
+        'view_item' => __('View Service', $themename),
+        'search_items' => __('Search Service', $themename),
+        'not_found' => __('No Service have been added yet', $themename),
+        'not_found_in_trash' => __('Nothing found in Service', $themename),
+        'parent_item_colon' => ''
+    );
+
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'show_in_nav_menus' => true,
+        'rewrite' => false,
+        'supports' => array('title', 'editor', 'thumbnail','excerpt'),
+        'has_archive' => false,
+    );
+
+    register_post_type('service', $args);
+}
+
 
 

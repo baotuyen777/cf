@@ -22,7 +22,7 @@ body{
     color:rgba(0, 0, 0, 0.73);
 }
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-    margin-top: 0;
+    /*margin-top: 0;*/
     margin-bottom: 0;
     font-family: thuphap;
     font-weight: 400;
@@ -37,7 +37,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     margin-left: 10px;
     float: left;
     margin-top: 15px;
-    font-family: thuphap
+    font-weight: bold;
+    /*font-family: thuphap*/
 }
 .logo small{
     margin-top:10px;
@@ -69,6 +70,12 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     width: 100%;
     padding-top: 20px;
 }
+.thumbnail-card{
+    border: 1px solid #ccc;
+}
+.thumbnail-card:hover{
+    background: rgba(204, 204, 204, 0.2);
+}
 .thumbnail-card img{
     box-shadow: 0 2px 4px -1px rgba(0,0,0,0.06);
     width: 100%;
@@ -87,6 +94,37 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 .bg-gray-dark .big{
     color: white;
+}
+.jumbotron-custom-content{
+    width: 100%;
+}
+.page-title h1{
+    color: white;
+    margin-top: 35px;
+}
+.page-content{
+    border: 1px solid #ccc;
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px;
+}
+.section-page{
+    margin-top: 40px;
+}
+.aligncenter{
+    display: block;
+    margin: 0px auto;
+}
+.blog .thumbnail-card {
+    text-align: left;
+    width: 100%;
+}
+.blog .thumbnail-card > a{
+    float: left;
+}
+.blog  .thumbnail-card-body{
+    float: left;
+    width: 65%;
 }
 @media (min-width: 992px){
     .post-classic-body {
