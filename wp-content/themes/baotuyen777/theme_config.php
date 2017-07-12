@@ -2,7 +2,6 @@
 
 define('PAGE_SERVICE', 8);
 define('PAGE_SHOP', 10);
-define('PAGE_SHOP', 10);
 define('PAGE_HOME', 4);
 define('PAGE_ABOUTUS', 6);
 //define('PAGE_FACEBOOK', 61);

@@ -78,7 +78,7 @@ $banner = get_field('banner', PAGE_HOME);
                                 <div class="cell-xs-6">
                                     <article class="box-icon">
                                         <figure class="box-icon-image">
-                                            <?php the_post_thumbnail() ?>
+                                            <img src="<?php echo  get_field('icon') ?>">
                                             <!--<img src="<?php echo get_template_directory_uri() ?>/images/icon-service-3-84x84.png" alt="" width="84" height="84"/>-->
                                         </figure>
                                         <p class="box-icon-header"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></p>
